@@ -17,8 +17,8 @@ html {
 :root {
     --bg-color: #080808;
     --second-bg-color: #001005;
-    --text-color: white;
-    --main-color: rgb(208, 35, 35);
+    --text-color: rgb(255, 255, 255);
+     --main-color: rgb(208, 35, 35);
 }
 
 body {
@@ -196,6 +196,12 @@ home-content h2 {
     background-color: var(--second-bg-color);
 }
 
+.about-img img {
+    width: 32vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px var(--main-color);
+    transition: 0.4s ease-in-out;
+}
 
 .about-img img:hover {
     box-shadow: 0 0 25px var(--main-color), 0 0 50px var(--main-color), 0 0 100px var(--main-color);
@@ -233,22 +239,22 @@ home-content h2 {
 }
 
 .service {
-    overflow: hidden; /* Ensure content stays within the bounds */
+    overflow: hidden;
     background-color: var(--bg-color);
     color: black;
-    padding: 2rem; /* Add padding for better spacing */
+    padding: 2rem;
 }
 
 .service h2 {
     color: var(--text-color);
-    text-align: center; /* Center the heading */
-    margin-bottom: 2rem; /* Add some margin below the heading */
+    text-align: center;
+    margin-bottom: 2rem;
 }
 
 .service-container {
-    display: grid; /* Switch to grid layout for better control */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
-    gap: 2.5rem; /* Space between boxes */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
     align-items: center;
     justify-content: center;
 }
@@ -263,7 +269,14 @@ home-content h2 {
     cursor: pointer;
     border: 5px solid transparent;
     transition: 0.4s ease-in-out;
-    padding: 2rem; /* Add padding inside the boxes */
+    padding: 2rem;
+}
+
+.service-box:hover {
+    background-color: var(--second-bg-color);
+    color: var(--main-color);
+    border: 5px solid var(--main-color);
+    transform: scale(1.03);
 }
 
 .service-box:hover {
@@ -279,45 +292,78 @@ home-content h2 {
     text-align: center;
     justify-content: center;
     align-items: center;
-    padding: 2rem; /* Reduce padding to fit better on smaller screens */
+    padding: 5rem;
 }
 
 .service-info i {
-    font-size: 6rem; /* Reduce icon size for better scaling */
+    font-size: 8rem;
 }
 
 .service-info h4 {
-    font-size: 2.5rem; /* Reduce heading size */
-    margin: 1.5rem 0;
+    font-size: 4rem;
+    margin: 2rem 0;
     font-weight: 800;
 }
 
 .service-info p {
-    font-size: 1.2rem; /* Reduce paragraph font size */
+    font-size: 1.4rem;
     font-weight: 600;
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
-/* Mobile View Adjustments */
-@media (max-width: 768px) {
-    .service-container {
-        grid-template-columns: 1fr; /* Single column layout */
-    }
+.work-experience {
+    background-color: var(--second-bg-color);
+    padding: 5rem 0;
+}
+.video-box {
+    transition: opacity 0.5s ease-in, transform 0.5s ease-in;
+    opacity: 1;
+    transform: scale(1);
+}
 
-    .service-info i {
-        font-size: 5rem; /* Adjust icon size */
-    }
+.video-box.hide {
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    opacity: 0;
+    transform: scale(0.95);
+    pointer-events: none; /* Prevent interaction while hidden */
+}
+.filter-buttons {
+    text-align: center;
+    margin-bottom: 2rem;
+}
 
-    .service-info h4 {
-        font-size: 2rem; /* Adjust heading size */
-    }
+.filter-buttons .btn {
+    margin: 0 1rem;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    background-color: var(--main-color);
+    color: black;
+    border-radius: 3rem;
+    font-weight: 600;
+    transition: 0.3s ease-in-out;
+}
 
-    .service-info p {
-        font-size: 1.1rem; /* Adjust paragraph font size */
-    }
-    .about-img{
-        display: none;
-    }
+.filter-buttons .btn:hover {
+    transform: scale(1.05);
+    background-color: var(--second-bg-color);
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+}
+
+.video-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    gap: 1rem; /* Match the gap to the service-container */
+   
+}
+.video-box {
+    flex: 1 300px; /* Flexible box, minimum width of 300px */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -387,6 +433,60 @@ home-content h2 {
     font-size: 16px;
 }
 
+@media(max-width:1024px) {
+    #menu-icon {
+        display: block;
+    }
+    .navbar {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 50%;
+        padding: 1rem 3rem;
+        background-color: rgba(0, 0, 0, 0.8);
+        border-left: 2px solid var(--main-color);
+        border-bottom: 2px solid var(--main-color);
+        border-bottom-left-radius: 2rem;
+        display: none;
+    }
+    .navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+        color: var(--text-color);
+    }
+    .navbar.active {
+        display: block;
+    }
+    .home {
+        flex-direction: column-reverse;
+        margin: 5rem 0;
+        gap: 5rem;
+    }
+    .home-content {
+        align-items: center;
+        text-align: center;
+    }
+    .home-img img {
+        width: 52vw;
+    }
+    .about {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .about h2 {
+        text-align: center;
+        margin: 2rem 0;
+    }
+    .about-img img {
+        display: none;
+    }
+    .contact form {
+        flex-direction: column;
+    }
+}
+
+
 
 .work-experience {
     background-color: var(--second-bg-color);
@@ -441,54 +541,4 @@ home-content h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-{
-    .navbar {
-        position: absolute;
-        top: 100%;
-        right: 0;
-        width: 50%;
-        padding: 1rem 3rem;
-        background-color: rgba(0, 0, 0, 0.8);
-        border-left: 2px solid var(--main-color);
-        border-bottom: 2px solid var(--main-color);
-        border-bottom-left-radius: 2rem;
-        display: none;
-    }
-    .navbar a {
-        display: block;
-        font-size: 2rem;
-        margin: 3rem 0;
-        color: var(--text-color);
-    }
-    .navbar.active {
-        display: block;
-    }
-    .home {
-        flex-direction: column-reverse;
-        margin: 5rem 0;
-        gap: 5rem;
-    }
-    .home-content {
-        align-items: center;
-        text-align: center;
-    }
-    .home-img img {
-        width: 52vw;
-    }
-    .about {
-        flex-direction: column-reverse;
-        text-align: center;
-    }
-    .about h2 {
-        text-align: center;
-        margin: 2rem 0;
-    }
-    .about img {
-        width: 52vw;
-    }
-    .contact form {
-        flex-direction: column;
-    }
 }
