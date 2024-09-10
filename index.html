@@ -11,7 +11,7 @@
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
 </head>
 
-<body onload="Loader()">
+<body class="loaded">
     <div class="card">
 <div class="center">
   <div class="loader">
@@ -204,10 +204,13 @@
     <script src="script.js"></script>
     <script src="workbuttons.js" ></script>
     script>
-        var loader = document. getElementById('loader');
-function Loader(){
-    loader.style.display = 'none'
-}
+    document.addEventListener("DOMContentLoaded", function() {
+    // Simulate a delay for loading (optional)
+    setTimeout(function() {
+        // Add the 'loaded' class to the body
+        document.body.classList.add("loaded");
+    }, 1000); // Delay in milliseconds (e.g., 1000ms = 1s)
+});
 </script>
 </body>
 
