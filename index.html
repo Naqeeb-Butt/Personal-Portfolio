@@ -12,7 +12,6 @@
 </head>
 
 <body>
-    <div id="preloader">
 <div class="card">
 <div class="center">
   <div class="loader">
@@ -25,7 +24,6 @@
       <span class="word">buttons</span>
     </div>
   </div>
-</div>
 </div>
 </div>
 
@@ -206,10 +204,10 @@
     <script src="script.js"></script>
     <script src="workbuttons.js" ></script>
     script>
-var loader = document.getEtementById("preloader") ;
- window.addEventListener("load", function(){
- loader.style.display = "none";
-    })
+window.addEventListener('load', function() {
+  const loader = document.querySelector('.card');
+  loader.style.display = 'none';
+});
 </script>
 </body>
 
