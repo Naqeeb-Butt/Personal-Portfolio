@@ -6,11 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio </title>
     <link rel="stylesheet" href="style.css" />
+     <link rel="stylesheet" href="preloader.css" />
     <link rel="icon" href="assets/img/Favico.png" type="image/png" sizes="32x32">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
 </head>
 
-<body>
+<body onload="Loader()">
+    <div class="card">
+<div class="center">
+  <div class="loader">
+    <p>loading</p>
+    <div class="words">
+      <span class="word">buttons</span>
+      <span class="word">forms</span>
+      <span class="word">switches</span>
+      <span class="word">cards</span>
+      <span class="word">buttons</span>
+    </div>
+  </div>
+</div>
+</div>
 
     <header class="header">
         <a href="#home" class="logo"> Naqeeb 
@@ -188,6 +203,12 @@
 
     <script src="script.js"></script>
     <script src="workbuttons.js" ></script>
+    script>
+        var loader = document. getElementById('loader');
+function Loader(){
+    loader.style.display = 'none'
+}
+</script>
 </body>
 
 </html>
