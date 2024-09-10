@@ -11,6 +11,8 @@ body{
     text-align: center; /* Center text inside the div */
 }
 .card {
+    position: fixed;
+    z-index: 9999;
     /* color used to softly clip top and bottom of the .words container */
     --bg-color: #212121;
     background-color: var(--bg-color);
