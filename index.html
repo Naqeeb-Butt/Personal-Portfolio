@@ -11,8 +11,9 @@
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
 </head>
 
-<body class="loaded">
-    <div class="card">
+<body>
+    <div id="preloader">
+<div class="card">
 <div class="center">
   <div class="loader">
     <p>loading</p>
@@ -24,6 +25,7 @@
       <span class="word">buttons</span>
     </div>
   </div>
+</div>
 </div>
 </div>
 
@@ -204,7 +206,7 @@
     <script src="script.js"></script>
     <script src="workbuttons.js" ></script>
     script>
-var loader = document.getEtementById("card") ;
+var loader = document.getEtementById("preloader") ;
  window.addEventListener("load", function(){
  loader.style.display = "none";
     })
