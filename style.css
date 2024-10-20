@@ -16,7 +16,6 @@ html {
 
 :root {
     --bg-color: #080808;
-    --second-bg-color: #001005;
     --text-color: rgb(255, 255, 255);
      --main-color: rgb(24, 75, 170);
 }
@@ -193,7 +192,7 @@ home-content h2 {
     justify-content: center;
     align-items: center;
     gap: 10rem;
-    background-color: var(--second-bg-color);
+    background-color: var(--bg-color);
 }
 
 .about-img img {
@@ -273,14 +272,14 @@ home-content h2 {
 }
 
 .service-box:hover {
-    background-color: var(--second-bg-color);
+    background-color: var(--bg-color);
     color: var(--main-color);
     border: 5px solid var(--main-color);
     transform: scale(1.03);
 }
 
 .service-box:hover {
-    background-color: var(--second-bg-color);
+    background-color: var(--bg-color);
     color: var(--main-color);
     border: 5px solid var(--main-color);
     transform: scale(1.03);
@@ -312,7 +311,7 @@ home-content h2 {
 }
 
 .work-experience {
-    background-color: var(--second-bg-color);
+    background-color: var(--bg-color);
     padding: 5rem 0;
 }
 .video-box {
@@ -345,7 +344,7 @@ home-content h2 {
 
 .filter-buttons .btn:hover {
     transform: scale(1.05);
-    background-color: var(--second-bg-color);
+    background-color: var(--bg-color);
     color: var(--main-color);
     border: 2px solid var(--main-color);
 }
@@ -368,7 +367,7 @@ home-content h2 {
 
 
 .contact {
-    background-color: var(--second-bg-color);
+    background-color: var(--bg-color);
 }
 
 .contact h2 {
@@ -489,7 +488,7 @@ home-content h2 {
 
 
 .work-experience {
-    background-color: var(--second-bg-color);
+    background-color: var(--bg-color);
     padding: 5rem 0;
 }
 .video-box {
@@ -522,7 +521,7 @@ home-content h2 {
 
 .filter-buttons .btn:hover {
     transform: scale(1.05);
-    background-color: var(--second-bg-color);
+    background-color: var(--bg-color);
     color: var(--main-color);
     border: 2px solid var(--main-color);
 }
